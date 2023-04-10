@@ -1,0 +1,30 @@
+# GET http://localhost:3000/todos/?limit=4&offset=1&search_q=LOW&order_by=priority&order=ASC&status=TO%20DO&priority=LOW&todo=Learn%20CSS
+###
+
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+
+GET http://localhost:3000/todos/10/
+### 
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+###
+
+PUT http://localhost:3000/todos/10/
+Content-Type: application/json
+
+{
+    "todo": "Some task"
+}
+
+###
+DELETE http://localhost:3000/todos/10/
+
